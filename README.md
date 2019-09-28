@@ -1,5 +1,4 @@
-# docker_exercise
-docker 練習
+# docker 練習
 
 ## docker images 或 docker image ls
 
@@ -18,6 +17,7 @@ DockerHub倉庫URL: https://hub.docker.com/
 ```
   // 例子 取得ubuntu映像檔資料
   docker pull ubuntu
+  
   // 查看映像檔
   docker images
 ```
@@ -27,6 +27,7 @@ DockerHub倉庫URL: https://hub.docker.com/
 ```
   // 刪除 image
   docker rmi [image名稱 or ID]
+  
   // 查看映像檔
   docker images
 ```
@@ -49,6 +50,7 @@ DockerHub倉庫URL: https://hub.docker.com/
     -i, --input string   Read from tar archive file, instead of STDIN
     -q, --quiet          Suppress the load output
   */
+  
   // 匯入 image
   docker load -i [load file]
 ```
@@ -81,6 +83,7 @@ DockerHub倉庫URL: https://hub.docker.com/
   // -t 選項讓Docker分配一個虛擬終端（pseudo-tty）並綁定到容器的標準輸入上
   // -i 則讓容器的標準輸入保持打開。
   docker run -it ubuntu base
+  
   // 查看容器
   docker ps
 ```
@@ -90,6 +93,7 @@ DockerHub倉庫URL: https://hub.docker.com/
 ```
   //  刪除 容器
   docker rm [容器ID]
+  
   // 查看容器
   docker ps
 ```
@@ -110,6 +114,7 @@ DockerHub倉庫URL: https://hub.docker.com/
                               <name|uid>[:<group|gid>])
     -w, --workdir string       Working directory inside the container
   */
+  
   // 進入容器
   docker exec -ti [容器ID] [COMMAND]
 ```
@@ -124,10 +129,13 @@ DockerHub倉庫URL: https://hub.docker.com/
   // 請先建立一個資料夾 裡面再建立一個檔案(Dockerfile)沒有副檔名
   // cd [進入該資料夾]
   docker build -t="[自訂名稱]" .
+  
   // 檢查是否建立成功
   docker image ls
+  
   // 刪除image 
   docker rmi [image名稱 or ID]
+  
 -----------------------------------------------------------------------
   //docker file 內容
   // # 井符號 註解
