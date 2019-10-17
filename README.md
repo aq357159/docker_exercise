@@ -1,8 +1,24 @@
 # docker 練習
 
+## 參考
+
+- docker官網：https://docs.docker.com/
+- Docker指令操作：https://medium.com/@VisonLi/docker-%E5%85%A5%E9%96%80-%E7%AD%86%E8%A8%98-part-2-91e4dfa2b365
+- 刪除所有容器or映像檔：https://techoverflow.net/2013/10/22/docker-remove-all-images-and-containers/
+
+# Image(映像檔)
+
 ## docker images 或 docker image ls
 
 ```
+  # Options:
+  #  -a, --all             Show all images (default hides intermediate images)
+  #      --digests         Show digests
+  #  -f, --filter filter   Filter output based on conditions provided
+  #      --format string   Pretty-print images using a Go template
+  #      --no-trunc        Don't truncate output
+  #  -q, --quiet           Only show numeric IDs
+
   # 例1:查看映像檔
   > docker images
 
@@ -27,6 +43,9 @@ DockerHub倉庫URL: https://hub.docker.com/
 ```
   # 刪除 image
   > docker rmi [image名稱 or ID]
+
+  # 刪除所有images
+  > docker rmi $(docker images -q)
   
   # 查看映像檔
   > docker images
@@ -51,6 +70,8 @@ DockerHub倉庫URL: https://hub.docker.com/
   # 匯入 image
   > docker load -i [load file]
 ```
+
+# Container(容器)
 
 ## docker ps [OPTIONS]
 
@@ -77,7 +98,7 @@ DockerHub倉庫URL: https://hub.docker.com/
   # 例子 建立一個ubuntu(IMAGE)有base(COMMAND)功能的容器
   # -t 選項讓Docker分配一個虛擬終端（pseudo-tty）並綁定到容器的標準輸入上
   # -i 則讓容器的標準輸入保持打開。
-  > docker run -it ubuntu base
+  > docker run -it ubuntu bash
   
   # 查看容器
   > docker ps
@@ -89,6 +110,9 @@ DockerHub倉庫URL: https://hub.docker.com/
   # 刪除 容器
   > docker rm [容器ID]
   
+  # 刪除所有容器
+  > docker rm [容器ID] $(docker ps -aq)
+
   # 查看容器
   > docker ps
 ```
