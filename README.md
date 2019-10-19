@@ -5,6 +5,8 @@
 - docker官網：https://docs.docker.com/
 - Docker指令操作：https://medium.com/@VisonLi/docker-%E5%85%A5%E9%96%80-%E7%AD%86%E8%A8%98-part-2-91e4dfa2b365
 - 刪除所有容器or映像檔：https://techoverflow.net/2013/10/22/docker-remove-all-images-and-containers/
+- docker-compose文件建立詳細說明：https://yeasy.gitbooks.io/docker_practice/compose/compose_file.html#compose-%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6
+- 同上官方版：https://docs.docker.com/compose/compose-file/
 
 # Image(映像檔)
 

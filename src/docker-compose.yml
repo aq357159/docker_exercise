@@ -1,0 +1,12 @@
+# 版本 要跟官網版本設定
+version: '3'
+services:
+  # 容器名稱
+  mongo:
+    # 載入映像黨
+    image: mongo
+    ports:
+      - 27017:27017
+
+
+
